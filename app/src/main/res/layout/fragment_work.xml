@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:context="com.example.ftkj.yunti_test.fragments.WorkFragment">
+<include layout="@layout/commen_toolbar_work"/>
+    <android.support.design.widget.TabLayout
+        app:tabIndicatorColor="#f56dc3"
+        android:background="#1877ec"
+        app:tabTextColor="#cecaca"
+        app:tabSelectedTextColor="#ffffff"
+        android:id="@+id/fragment_work_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_work_pager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>
