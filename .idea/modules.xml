@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Yunti_Test.iml" filepath="$PROJECT_DIR$/Yunti_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FTYunTi.iml" filepath="$PROJECT_DIR$/FTYunTi.iml" />
+      <module fileurl="file://D:\MyAndroid\MyProgram\FTYunTi\Yunti_Test.iml" filepath="D:\MyAndroid\MyProgram\FTYunTi\Yunti_Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\MyAndroid\MyProgram\FTYunTi\app\app.iml" filepath="D:\MyAndroid\MyProgram\FTYunTi\app\app.iml" />
     </modules>
   </component>
 </project>
