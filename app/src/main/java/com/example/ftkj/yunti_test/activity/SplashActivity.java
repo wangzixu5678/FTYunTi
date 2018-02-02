@@ -17,7 +17,7 @@ import com.githang.statusbar.StatusBarCompat;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class WelcomActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     @BindView(R.id.welcom_image1)
     ImageView mWelcomImage1;

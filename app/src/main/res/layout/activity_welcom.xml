@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainColor"
-    tools:context="com.example.ftkj.yunti_test.activity.WelcomActivity">
+    tools:context="com.example.ftkj.yunti_test.activity.SplashActivity">
     <RelativeLayout
         android:gravity="center"
         android:id="@+id/welcom_anim"
