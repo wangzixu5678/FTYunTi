@@ -3,6 +3,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ftkj.yunti_test.adapters.FragmentAdapter;
@@ -58,10 +61,20 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
         TabLayout.Tab newTab;
         for (int i = 0; i < fragments.size(); i++) {
             newTab = mIndicator.newTab();
-            newTab.setIcon(ICONS[i]);
-            newTab.setText(TITLE[i]);
+//            newTab.setIcon(ICONS[i]);
+//            newTab.setText(TITLE[i]);
+            initNewTab(newTab, i);
             mIndicator.addTab(newTab);
         }
+    }
+
+    private void initNewTab(TabLayout.Tab newTab, int i) {
+        View view = View.inflate(this, R.layout.tab_customview, null);
+        ImageView tab_icon = (ImageView)view.findViewById(R.id.tab_icon);
+        TextView tab_text = (TextView)view.findViewById(R.id.tab_text);
+        tab_icon.setImageResource(ICONS[i]);
+        tab_text.setText(TITLE[i]);
+        newTab.setCustomView(view);
     }
 
     @Override
