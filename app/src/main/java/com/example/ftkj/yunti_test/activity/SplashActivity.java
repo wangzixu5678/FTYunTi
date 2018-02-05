@@ -38,6 +38,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcom);
         ButterKnife.bind(this);
         int whiteColor = Color.rgb(24, 119, 236);
+
         StatusBarCompat.setStatusBarColor(this, whiteColor, true);
         startWelcomAnim();
         new Thread(new Runnable() {
@@ -45,7 +46,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 try {
                     Thread.sleep(5000);
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

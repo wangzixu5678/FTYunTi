@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ftkj.yunti_test.activity.ScannerActivity">
+    <include layout="@layout/common_toolbar_text"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:background="#999"
+            android:id="@+id/scanner_contain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="#f7f7f7"
+            android:layout_marginBottom="@dimen/y100"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="请对准智能屏扫描二维码"
+            android:textSize="@dimen/x25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

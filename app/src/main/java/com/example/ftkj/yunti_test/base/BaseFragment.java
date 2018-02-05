@@ -1,5 +1,6 @@
 package com.example.ftkj.yunti_test.base;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -33,16 +34,17 @@ public abstract class BaseFragment<B extends MBasePresenter> extends Fragment {
     private Toolbar mToolbar;
     private TextView mTitle;
     private TextView mTitleSub;
+    protected Activity mActivity;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Log.d("test", "onCreateView: baseFragment ");
-        try{
-            presenter = GenericHelper.newPresenter(this);
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try{
+//            presenter = GenericHelper.newPresenter(this);
+//        }catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        mActivity = getActivity();
         rootView = inflater.inflate(getLayoutId(), container, false);
         ButterKnife.bind(this,rootView);
         onInit();
@@ -170,6 +172,7 @@ public abstract class BaseFragment<B extends MBasePresenter> extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+
 //        presenter.end();
     }
     public <T extends View> T getView(int layoutId){

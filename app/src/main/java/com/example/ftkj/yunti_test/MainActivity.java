@@ -45,6 +45,11 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
     protected void initData() {
         /**
          * 添加Fragment
@@ -68,6 +73,12 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
         }
     }
 
+    @Override
+    protected void initListener() {
+        mIndicator.setOnTabSelectedListener(this);
+        mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mIndicator));
+    }
+
     private void initNewTab(TabLayout.Tab newTab, int i) {
         View view = View.inflate(this, R.layout.tab_customview, null);
         ImageView tab_icon = (ImageView)view.findViewById(R.id.tab_icon);
@@ -77,11 +88,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
         newTab.setCustomView(view);
     }
 
-    @Override
-    protected void onListener() {
-        mIndicator.setOnTabSelectedListener(this);
-        mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mIndicator));
-    }
+
 
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
